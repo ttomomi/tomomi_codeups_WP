@@ -1,0 +1,162 @@
+@use "global" as *;
+.card {
+  position: relative;
+  margin-top: rem(28);
+  display: flex;
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.card:nth-child(n+2) {
+  margin-top: rem(25);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+.card__body {
+  padding-top: rem(1);
+  padding-right: rem(21);
+  padding-left: rem(21);
+  @include mq(md) {
+    padding-top: rem(4);
+    padding-right: rem(23);
+    padding-left: rem(23);
+  }
+}
+.card__title,
+.card__text,
+.card__date {
+  color: $black;
+}
+.card__category {
+  color: #000;
+}
+
+.card__title {
+font-weight: $normal;
+font-size: rem(18);
+line-height: 2;
+letter-spacing: 0.05em;
+margin-top: rem(2);
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; 
+overflow: hidden;
+@include mq(md) {
+  margin-top: 0;
+  letter-spacing: 0.06em;
+  line-height: 1.9444444;
+}
+}
+.card__text,
+.card__category,
+.card__date {
+  font-size: rem(14);
+  line-height: 1.85714;
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: rem(6);
+  padding-right: rem(21);
+  padding-left: rem(21);
+  padding-bottom: rem(16);
+  @include mq(md) {
+    padding-right: rem(23);
+    padding-left: rem(23);
+    padding-bottom: rem(15);
+    padding-top: rem(9);
+  }
+}
+.card__category {
+  background-color: #796d0494;
+  padding: rem(4) rem(4);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-indent: 0.08em;
+  font-weight: $regular;
+  @include mq(md) {
+    padding: rem(5) rem(5);
+  }
+}
+
+.card__text {
+  padding-top: rem(2);
+  letter-spacing: 0.08em;
+  font-weight: $regular;
+  @include mq(md) {
+    padding-top: rem(6);
+  }
+}
+.card__date {
+  letter-spacing: 0.09em;
+  font-weight: $regular;
+  @include mq(md) {
+    letter-spacing: 0.07em;
+  }
+}
+.card__list {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  width: 100%;
+}
+
+.card__img {
+  position: relative;
+}
+.card__img::before {
+  content: "";
+  display: block;
+  padding-top: 66.567164%;
+  @include mq(md) {
+    padding-top: 66.571429%;
+  }
+}
+.card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// ホバー時 背景色変更
+.card__list:hover {
+  background-color: $black;
+  color: $white;
+  transition: all 0.3s ease 0s;
+}
+.card:hover .card__title,
+.card:hover .card__text,
+.card:hover .card__date {
+  color: $white;
+  transition: all 0.3s ease 0s;
+}
+
+// newマークの表示
+.card:first-child::before {
+  position: absolute;
+  z-index: 1;
+  content: 'New';
+  color: $white;
+  font-weight: $regular;
+  font-size: rem(16);
+  line-height: rem(60);
+  letter-spacing: 0.1em;
+  text-indent: 0.17em;
+  background-color: #FFBA6A;
+  border-radius: 50%;
+  width: rem(60);
+  height: rem(60);
+  text-align: center;
+  top: rem(-17);
+  left: rem(-16);
+}
+.main-blog__items .card:first-child::before {
+  display: none;
+}

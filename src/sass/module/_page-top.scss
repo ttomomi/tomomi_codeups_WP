@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.page-top {
+  width: rem(45);
+  height: rem(45);
+  background-color: $black;
+  position: fixed;
+  right: rem(20);
+  bottom: rem(41);
+  z-index: 20;
+  transition: ease 0.3s;
+  @include mq(md) {
+    bottom: rem(32);
+    right: rem(31);
+  }
+}
+.page-top a {
+  display: block;
+  height: inherit;
+}
+.page-top__arrow {
+  display: inline-block;
+  vertical-align: middle;
+  color: $black;
+  line-height: 1;
+  position: relative;
+  width: rem(18);
+  height: rem(18);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  transition: ease 0.3s;
+}
+
+.page-top__arrow::before, .page-top__arrow::after {
+  content: '';
+  position: absolute;
+  background: $white;
+  border-radius: 0.1em;
+  transition: ease 0.3s;
+}
+
+.page-top__arrow::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem(2);
+}
+
+.page-top__arrow::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: rem(2);
+}
+
+
+// ホバー時色変化
+.page-top:hover {
+  background: $white;
+}
+.page-top a:hover .page-top__arrow::before,
+.page-top a:hover .page-top__arrow::after {
+  background: $black;
+}

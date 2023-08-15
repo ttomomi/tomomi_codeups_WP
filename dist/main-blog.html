@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="Code Upsの企業サイト" />
+    <meta name="keywords" content="Code Ups,企業サイト,企業カテゴリ" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- noindex -->
+    <meta name="robots" content="noindex">
+    <!-- ファビコン -->
+    <link rel="icon" href="" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- フォントファミリー -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+
+    <header class="header top-header js-header">
+      <div class="header__inner">
+        <div class="header__logo logo">
+          <a href="index.html" class="logo__link">
+            横浜珈琲
+          </a>
+        </div>
+        <button class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__pc-nav pc-nav">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item"><a href="news.html"><span>お知らせ</span></a></li>
+            <li class="pc-nav__item"><a href="content.html"><span>事業内容</span></a></li>
+            <li class="pc-nav__item"><a href="main-works.html"><span>取扱商品</span></a></li>
+            <li class="pc-nav__item"><a href="overview.html"><span>企業概要</span></a></li>
+            <li class="pc-nav__item"><a href="main-blog.html"><span>ブログ</span></a></li>
+            <li class="pc-nav__item pc-nav__item--white"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <nav class="header__sp-nav sp-nav js-drawer-menu">
+          <div class="sp-nav__scroll">
+            <ul class="sp-nav__items">
+              <li class="sp-nav__item"><a href="#"><span>トップ</span></a></li>
+              <li class="sp-nav__item"><a href="news.html"><span>お知らせ</span></a></li>
+              <li class="sp-nav__item"><a href="content.html"><span>事業内容</span></a></li>
+              <li class="sp-nav__item"><a href="main-works.html"><span>取扱商品</span></a></li>
+              <li class="sp-nav__item"><a href="overview.html"><span>企業概要</span></a></li>
+              <li class="sp-nav__item"><a href="main-blog.html"><span>ブログ</span></a></li>
+              <li class="sp-nav__item"><a href="contact.html"><span>お問い合わせ</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <!-- メインビジュアル -->
+      <div class="sub-mv js-mv">
+        <div class="sub-mv__img">
+          <img src="./assets/images/common/main-blog-mv.jpg" alt="万年筆と紙">
+        </div>
+        <h2 class="sub-mv__title">
+          ブログ
+        </h2>
+      </div>
+      
+      <!-- main-blog -->
+      <section class="main-blog">
+        <div class="main-blog__inner inner">
+          <ol class="sub-content__breadcrumbs breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="index.html">トップ</a>
+            </li>
+            <li class="breadcrumbs__item">
+              ブログ記事一覧
+            </li>
+          </ol>
+          <div class="main-blog__tab tab">
+            <ul class="tab-list">
+              <li class="tab__item js-tab current">all</li>
+              <li class="tab__item js-tab">カフェ</li>
+              <li class="tab__item js-tab">イベント</li>
+            </ul>
+            
+            <div class="tab__group">
+              <div class="tab__box js-content">
+                <div class="blog__items cards main-blog__items">
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card1.jpg"
+                                alt="ブログカード1"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          コーヒー教室の開催。
+                        </h3>
+                        <p class="card__text">
+                          50人もの方が集まり、みんなで和気藹々と行われたコーヒーの淹れ方教室。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          イベント
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card2.jpg"
+                                alt="ブログカード2"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          美味しいコーヒー豆入りました。
+                        </h3>
+                        <p class="card__text">
+                          美味しいコーヒー豆がブラジルから来たのでぜひお越しください。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          コーヒー豆
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card3.jpg"
+                                alt="ブログカード2"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          夜のコーヒーイベント。
+                        </h3>
+                        <p class="card__text">
+                          週に1回の深夜から始まるコーヒーイベント。コーヒーを使ったお酒用意してます。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          イベント
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card4.jpg"
+                                alt="青い蝶々"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          コーヒーの魔法：カフェの隠された秘密
+                        </h3>
+                        <p class="card__text">
+                          コーヒーの深い魅力と、カフェでの魔法の瞬間について探求します。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          イベント
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card5.jpg"
+                                alt="ブログカード5"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          旅行者のための穴場カフェガイド
+                        </h3>
+                        <p class="card__text">
+                          旅行者向けに、地元のカフェでローカルな雰囲気を楽しむ方法と、おすすめの穴場カフェを紹介します。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          カテゴリ
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card6.jpg"
+                                alt="ブログカード2"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          季節の味覚：カフェメニューの夏フレーバー
+                        </h3>
+                        <p class="card__text">
+                          夏にぴったりのカフェメニューと、旬の食材を使用した新しい味わいについて紹介します。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          カテゴリ
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card7.jpg"
+                                alt="ブログカード2"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          バリスタの技術：ラテアートの極意
+                        </h3>
+                        <p class="card__text">
+                          バリスタのプロによるラテアートのテクニックと、美しいカップの中に隠れるストーリーを明らかにします。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          カテゴリ
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/blog-card2.jpg"
+                                alt="ブログカード2"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title">
+                          コーヒーブレイクの重要性：仕事の効率をアップする方法
+                        </h3>
+                        <p class="card__text">
+                          仕事の合間に取るコーヒーブレイクの大切さと、リフレッシュするための効果的な方法を提案します。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          カテゴリ
+                        </div>
+                        <time class="card__date" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="cards__item card">
+                    <a href="sub-blog.html" class="card__list">
+                      <figure class="card__img">
+                              <img
+                                src="./assets/images/common/top-blog-card9.jpg"
+                                alt="ブログカード3"
+                              />
+                      </figure>
+                      <div class="card__body">
+                        <h3 class="card__title card__hover">
+                          地域との結びつき：地元農家とのコラボレーション
+                        </h3>
+                        <p class="card__text card__hover">
+                          カフェが地元農家と協力し、新鮮な食材を活用したメニューを提供する背後にあるストーリーや価値観について掘り下げます。
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        <div class="card__category">
+                          カテゴリ
+                        </div>
+                        <time class="card__date card__hover" datetime="2021-07-20">
+                          2021.07.20
+                        </time>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="tab__box js-content">
+              <div class="main-works__items  main-blog__items">
+                <article class="cards__item card">
+                  <a href="sub-blog.html" class="card__list">
+                    <figure class="card__img">
+                            <img
+                              src="./assets/images/common/top-blog-card1.jpg"
+                              alt="ブログカード1"
+                            />
+                    </figure>
+                    <div class="card__body">
+                      <h3 class="card__title">
+                        コーヒー教室の開催。
+                      </h3>
+                      <p class="card__text">
+                        50人もの方が集まり、みんなで和気藹々と行われたコーヒーの淹れ方教室。
+                      </p>
+                    </div>
+                    <div class="card__info">
+                      <div class="card__category">
+                        イベント
+                      </div>
+                      <time class="card__date" datetime="2021-07-20">
+                        2021.07.20
+                      </time>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+            <div class="tab__box js-content">
+              <div class="main-works__items  main-blog__items">
+                <article class="cards__item card">
+                  <a href="sub-blog.html" class="card__list">
+                    <figure class="card__img">
+                            <img
+                              src="./assets/images/common/top-blog-card1.jpg"
+                              alt="ブログカード1"
+                            />
+                    </figure>
+                    <div class="card__body">
+                      <h3 class="card__title">
+                        コーヒー教室の開催。
+                      </h3>
+                      <p class="card__text">
+                        50人もの方が集まり、みんなで和気藹々と行われたコーヒーの淹れ方教室。
+                      </p>
+                    </div>
+                    <div class="card__info">
+                      <div class="card__category">
+                        イベント
+                      </div>
+                      <time class="card__date" datetime="2021-07-20">
+                        2021.07.20
+                      </time>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="main-blog__pagination pagination">
+            <ol class="pagination__items">
+              <li class="pagination__prev"><a href="#">prev</a></li>
+              <li class="pagination__number pagination__current"><a href="#">1</a></li>
+              <li class="pagination__number"><a href="#">2</a></li>
+              <li class="pagination__number"><a href="#">3</a></li>
+              <li class="pagination__number"><a href="#">4</a></li>
+              <li class="pagination__next"><a href="#">next</a></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- contact -->
+      <section class="contact news-contact">
+        <div class="contact__inner inner">
+          <div class="contact__title section-title">
+            <h2 class="section-title__main">お問い合わせ</h2>
+            <span class="section-title__sub section-title__sub--contact">Contact</span>
+          </div>
+          <div class="contact__text">
+            <p>
+              お問い合わせは下記のリンクへ
+            </p>
+          </div>
+          <div class="contact__btn">
+            <a href="contact.html" class="button button--contact">お問い合わせへ</a>
+          </div>
+        
+      </section>
+      <!-- /.contact -->
+
+    </main>
+    <footer class="footer top-footer">
+      <div class="footer__inner">
+        <nav class="footer__nav footer-nav">
+          <div class="footer-nav__logo">
+            <a href="index.html">横浜珈琲</a>
+          </div>
+          <ul class="footer-nav__items">
+            <li class="footer-nav__item"><a href="index.html"><span>トップ</span></a></li>
+            <li class="footer-nav__item"><a href="news.html"><span>お知らせ</span></a></li>
+            <li class="footer-nav__item"><a href="content.html"><span>事業内容</span></a></li>
+            <li class="footer-nav__item"><a href="main-works.html"><span>取扱商品</span></a></li>
+            <li class="footer-nav__item"><a href="overview.html"><span>企業概要</span></a></li>
+            <li class="footer-nav__item"><a href="main-blog.html"><span>ブログ</span></a></li>
+            <li class="footer-nav__item"><a href="contact.html"><span>お問い合わせ</span></a></li>
+          </ul>
+        </nav>
+        <div class="footer__copyright">
+          <small>&copy; 2021 CodeUps Inc.</small>
+        </div>
+      </div>
+    </footer>
+    <div class="page-top">
+      <a href="#" class="">
+        <div class="page-top__arrow"></div>
+      </a>
+    </div>
+  </body>
+</html>

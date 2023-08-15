@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.footer-nav__logo {
+  width: rem(70);
+  margin: auto;
+  @include mq(md) {
+    margin: 0;
+  }
+}
+.footer__inner {
+  padding: 0 $padding-sp;
+  margin: auto;
+  max-width: rem(1266);
+  width: 100%;
+  @include mq(md) {
+    padding: 0 $padding-pc;
+  }
+}
+.footer__copyright {
+  text-align: center;
+  margin-top: rem(30);
+  color: $black;
+  font-size: rem(11);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-indent: 0.4em;
+  @include mq(md) {
+    font-size: rem(18);
+    margin-top: rem(72);
+    letter-spacing: 0.08em;
+  }
+}

@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.link {
+  display: flex;
+  justify-content: center;
+}
+.link__item {
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $black;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid $black;
+  padding: rem(3) rem(18);
+  transition: 0.3s;
+}
+.link__item + .link__item {
+  margin-left: rem(48);
+}
+.link__item:hover {
+  background-color: $black;
+  color: $white;
+}
