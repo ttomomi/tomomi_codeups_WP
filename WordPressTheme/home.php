@@ -17,19 +17,19 @@
           <?php get_template_part('parts/breadcrumbs') ?>
           <div class="sub-news__contents">
 
-          <?php if(have_posts()):while (have_posts()):the_post(); ?>
-            <div class="sub-news__content news-content">
-              <div class="news-content__info">
-                <time class="news-content__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-                <?php $cat = get_the_category(); $cat = $cat[0]->cat_name ?>
-                <span class="news-content__category"><?php echo $cat ?></span>
+            <?php if(have_posts()):while (have_posts()):the_post(); ?>
+              <div class="sub-news__content news-content">
+                <div class="news-content__info">
+                  <time class="news-content__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
+                  <?php $cat = get_the_category(); $cat = $cat[0]->cat_name ?>
+                  <span class="news-content__category"><?php echo $cat ?></span>
+                </div>
+                <div class="news-content__block">
+                  <a href="<?php the_permalink(); ?>" class="news-content__text news-content__text--bottom">
+                    <?php the_title(); ?>
+                  </a>
+                </div>
               </div>
-              <div class="news-content__block">
-                <a href="<?php the_permalink(); ?>" class="news-content__text news-content__text--bottom">
-                  <?php the_title(); ?>
-                </a>
-              </div>
-            </div>
             <?php endwhile; endif; ?>
 
           </div>

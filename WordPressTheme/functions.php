@@ -36,3 +36,24 @@ function my_setup() {
 	);
 }
 add_action( 'after_setup_theme', 'my_setup' );
+
+
+//アーカイブの表示件数変更
+function change_posts_per_page($query) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+    if ( $query->is_archive('works') ) { //カスタム投稿タイプを指定
+        $query->set( 'posts_per_page', '6' ); //表示件数を指定
+    }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+// add_action('init', function() {
+//     register_post_type('item', [
+//         'label' => '取扱商品',
+//         'public' => true,
+//         'menu_position' => 5,
+//         'menu_icon' => 'dashicons-store',
+//         'supports' => ['thumbnail', 'title', 'editor']
+//     ]);
+// });
