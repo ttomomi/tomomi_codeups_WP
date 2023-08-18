@@ -21,7 +21,7 @@ jQuery(function ($) {
   // タブメニュー
   $(".js-content:first-of-type").css("display", "block");
   $(".js-tab").on("click", function () {
-    $(".current").removeClass("current");
+    $(".js-tab").removeClass("current");
     $(this).addClass("current");
     var index = $(this).index();
     $(".js-content").hide().eq(index).fadeIn(300);

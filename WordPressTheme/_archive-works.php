@@ -12,7 +12,6 @@
     </div>
     <section class="main-works bottom-main-works">
         <div class="main-works__inner inner">
-          <!-- パンくずリスト -->
             <div class="breadcrumbs">
                 <?php
                 if (function_exists('bcn_display')) {
@@ -21,8 +20,8 @@
                 ?>
             </div>
             <div class="main-works__tab tab">
-              <!-- カテゴリー(ターム)を全部表示 -->
               <ul class="tab-list">
+                  
                   <li class="tab__item js-tab"<?php if ($current_tab === 'all') echo 'current'; ?>>
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'works' ) ); ?>">すべて</a>
                   </li>
@@ -51,11 +50,13 @@
                                   <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/noimage.png" alt="noimage">
                               <?php endif; ?>
                               <?php
-                              $taxonomy_terms = get_the_terms($post->ID, 'works_item'); 
-                              if ( $taxonomy_terms ) {
-                                echo '<span class="main-works__category">'.$taxonomy_terms[0]->name.'</span>';
-                              }
-                            ?>
+                                $taxonomy_terms = get_the_terms($post->ID,'works_item');
+                                foreach( $taxonomy_terms as $taxonomy_term ) {
+                                  if ( !in_array( $taxonomy_term->slug, array( 'latte','food','drink') ) )
+                                  continue;
+                                  echo '<span class="main-works__category'.$taxonomy_term->slug.'">'.$taxonomy_term->name.'</span>';
+                                }
+                              ?>
                           </div>
                           <div class="main-works__title">
                               <?php the_title(); ?>

@@ -48,12 +48,5 @@ function change_posts_per_page($query) {
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
-// add_action('init', function() {
-//     register_post_type('item', [
-//         'label' => '取扱商品',
-//         'public' => true,
-//         'menu_position' => 5,
-//         'menu_icon' => 'dashicons-store',
-//         'supports' => ['thumbnail', 'title', 'editor']
-//     ]);
-// });
+//画像圧縮品質変更(PHP5.3以上)
+add_filter( 'jpeg_quality', function( $arg ){ return 100; } );

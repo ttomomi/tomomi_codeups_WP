@@ -13,7 +13,7 @@
   text-align: center;
   text-transform: uppercase;
 }
-.tab__item:nth-child(n+1) {
+.tab__item:nth-child(n+2) {
   margin-left: rem(24);
   @include mq(md) {
     margin-left: rem(40);

@@ -26,6 +26,7 @@
   }
 }
 .main-works__item {
+  display: block;
   @include mq(md) {
     width: calc(50% - rem(24));
   }
@@ -49,6 +50,11 @@
 }
 .main-works__image {
   position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  @include mq(md) {
+    margin: 0;
+  }
 }
 .main-works__item {
   position: relative;
