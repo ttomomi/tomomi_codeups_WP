@@ -48,6 +48,13 @@ overflow: hidden;
   line-height: 1.9444444;
 }
 }
+// 下層ページフォントサイズ変更
+.card__title.card__title--bottom {
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
 .card__text,
 .card__category,
 .card__date {

@@ -15,44 +15,7 @@
         <div class="sub-contact__inner inner">
         <?php get_template_part('parts/breadcrumbs') ?>
         </div>
-        <div class="sub-contact__wrapper inner">
-          <form action="" method="post" id="" class="sub-contact__form form js-form">
-            <span class="form__error"></span>
-            <dl class="form__item">
-              <dt>※会社名</dt>
-              <dd>
-                <input type="text" name="company" value="" placeholder="テキストがはいります" class="form__company js-text" required />
-              </dd>
-            </dl>
-            <dl class="form__item">
-              <dt>※お名前</dt>
-              <dd>
-                <input type="text" name="your_name" value="" placeholder="テキストがはいります"  required />
-              </dd>
-            </dl>
-            <dl class="form__item">
-              <dt>※ふりがな</dt>
-              <dd>
-                <input type="text" name="your_kana" value="" placeholder="テキストがはいります"  required />
-              </dd>
-            </dl>
-            <dl class="form__item">
-              <dt>※メールアドレス</dt>
-              <dd>
-                <input type="email" name="your_mail" value="" placeholder="テキストがはいります"  required />
-              </dd>
-            </dl>
-            <dl>
-              <dt>※お問い合わせ内容 </dt>
-              <dd>
-                <textarea name="contents" placeholder="テキストがはいります" required ></textarea>
-              </dd>
-            </dl>
-            <div class="form__btn">
-              <input type="submit" class="form__btn js-btn" value="送信"/>
-            </div>
-          </form>
-      </div>
+        <?php echo do_shortcode('[contact-form-7 id="97af707" title="お問い合わせ"]'); ?>
       </section>
 
     </main>

@@ -4,8 +4,9 @@
 .form {
   letter-spacing: 0.007em;
   color: $black;
+  display: block;
 }
-.form dl {
+.form__item {
   max-width: rem(540);
   margin: auto;
   @include mq(md) {
@@ -14,16 +15,16 @@
   max-width: rem(856);
 }
 }
-.form dl:not(:first-child){
+.form__item:not(:first-child){
   margin-top: rem(32);
   @include mq(md) {
     margin-top: rem(45);
   }
 }
-.form dl dt {
+.form .form__item dt {
   flex: 0 1 rem(150);
 }
-.form dl dd {
+ .form__item dd {
   width: 100%;
   flex: 0 1 calc(100% - rem(150));
   @include mq(md) {
@@ -34,6 +35,7 @@
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(25.9 / 14);
+  text-align: right;
 }
 .form__item dd {
   margin-top: rem(16);

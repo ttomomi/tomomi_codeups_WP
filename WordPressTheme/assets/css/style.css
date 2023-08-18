@@ -340,6 +340,10 @@ a {
 	overflow: hidden;
 }
 
+.card__title.card__title--bottom {
+	font-size: 1.125rem;
+}
+
 .card__text,
 .card__category,
 .card__date {
@@ -649,23 +653,24 @@ a {
 
 .form {
 	color: #333;
+	display: block;
 	letter-spacing: 0.007em;
 }
 
-.form dl {
+.form__item {
 	margin: auto;
 	max-width: 33.75rem;
 }
 
-.form dl:not(:first-child) {
+.form__item:not(:first-child) {
 	margin-top: 2rem;
 }
 
-.form dl dt {
+.form .form__item dt {
 	flex: 0 1 9.375rem;
 }
 
-.form dl dd {
+.form__item dd {
 	flex: 0 1 calc(100% - 9.375rem);
 	width: 100%;
 }
@@ -674,6 +679,7 @@ a {
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.85;
+	text-align: right;
 }
 
 .form__item dd {
@@ -2162,6 +2168,10 @@ html {
 	margin-top: 0;
 }
 
+.card__title.card__title--bottom {
+	font-size: 0.875rem;
+}
+
 .card__info {
 	padding-bottom: 0.9375rem;
 	padding-left: 1.4375rem;
@@ -2276,17 +2286,17 @@ html {
 	margin-top: 4.5rem;
 }
 
-.form dl {
+.form__item {
 	display: flex;
 	max-width: 53.5rem;
 	width: 100%;
 }
 
-.form dl:not(:first-child) {
+.form__item:not(:first-child) {
 	margin-top: 2.8125rem;
 }
 
-.form dl dd {
+.form__item dd {
 	margin-left: 1.5rem;
 }
 
