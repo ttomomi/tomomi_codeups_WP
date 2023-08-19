@@ -169,8 +169,8 @@ a {
 	margin-top: 4.125rem;
 }
 
-.news-contact {
-	margin-top: 7.5rem;
+.bottom-sub-blog {
+	margin-top: 4.125rem;
 }
 
 .bottom-sub-news {
@@ -313,6 +313,10 @@ a {
 }
 
 .card__body {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding-bottom: 1rem;
 	padding-left: 1.3125rem;
 	padding-right: 1.3125rem;
 	padding-top: 0.0625rem;
@@ -356,10 +360,6 @@ a {
 	display: flex;
 	justify-content: space-between;
 	margin-top: auto;
-	padding-bottom: 1rem;
-	padding-left: 1.3125rem;
-	padding-right: 1.3125rem;
-	padding-top: 0.375rem;
 }
 
 .card__category {
@@ -918,6 +918,7 @@ div.wpcf7-acceptance-missing {
 	padding: 0.1875rem 1.125rem;
 	text-transform: uppercase;
 	transition: 0.3s;
+	white-space: nowrap;
 }
 
 .link__item + .link__item {
@@ -934,6 +935,10 @@ div.wpcf7-acceptance-missing {
 	font-size: 1.5rem;
 	position: relative;
 	z-index: 9999;
+}
+
+.main-blog__inner {
+	max-width: 37.5rem;
 }
 
 .main-blog__tab {
@@ -1812,6 +1817,10 @@ div.wpcf7-acceptance-missing {
 	margin-top: 3.3125rem;
 }
 
+.sub-works__inner.inner {
+	margin-top: 3.3125rem;
+}
+
 .sub-works__title {
 	color: #333;
 	font-size: 1.25rem;
@@ -1830,7 +1839,6 @@ div.wpcf7-acceptance-missing {
 
 .sub-works__category {
 	border: 1px solid #333;
-	margin-left: 1.875rem;
 	padding: 0.4375rem 1.4375rem;
 }
 
@@ -1920,6 +1928,10 @@ div.wpcf7-acceptance-missing {
 
 .sub-works__image-bottom.swiper-slide img {
 	height: 100%;
+}
+
+.sub-works__article {
+	max-width: 37.5rem;
 }
 
 /* レイアウトのためのスタイル */
@@ -2024,6 +2036,7 @@ div.wpcf7-acceptance-missing {
 .tab-list {
 	cursor: pointer;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .tab__item {
@@ -2034,10 +2047,6 @@ div.wpcf7-acceptance-missing {
 	padding: 0.1875rem 0.5rem;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-.tab__item:nth-child(n+2) {
-	margin-left: 1.5rem;
 }
 
 .tab__item.current {
@@ -2156,10 +2165,6 @@ html {
 	margin-top: 9.375rem;
 }
 
-.news-contact {
-	margin-top: 9.375rem;
-}
-
 .top-blog {
 	margin-top: 13.1875rem;
 }
@@ -2247,6 +2252,7 @@ html {
 }
 
 .card__body {
+	padding-bottom: 0.875rem;
 	padding-left: 1.4375rem;
 	padding-right: 1.4375rem;
 	padding-top: 0.25rem;
@@ -2260,13 +2266,6 @@ html {
 
 .card__title.card__title--bottom {
 	font-size: 0.875rem;
-}
-
-.card__info {
-	padding-bottom: 0.9375rem;
-	padding-left: 1.4375rem;
-	padding-right: 1.4375rem;
-	padding-top: 0.5625rem;
 }
 
 .card__category {
@@ -2847,9 +2846,19 @@ textarea {
 	margin-top: 5.6875rem;
 }
 
+.sub-works__inner.inner {
+	margin-top: 5.6875rem;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.sub-works__top.inner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .sub-works__title {
 	font-size: 1.4375rem;
-	margin-top: 5.6875rem;
 }
 
 .sub-works__meta {

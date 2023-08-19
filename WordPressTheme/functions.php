@@ -38,15 +38,25 @@ function my_setup() {
 add_action( 'after_setup_theme', 'my_setup' );
 
 
-//アーカイブの表示件数変更
-function change_posts_per_page($query) {
+//アーカイブの表示件数変更 works
+function change_posts_per_works($query) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
     if ( $query->is_archive('works') ) { //カスタム投稿タイプを指定
         $query->set( 'posts_per_page', '6' ); //表示件数を指定
     }
 }
-add_action( 'pre_get_posts', 'change_posts_per_page' );
+add_action( 'pre_get_posts', 'change_posts_per_works' );
+
+//アーカイブの表示件数変更 blog
+function change_posts_per_blog($query) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+    if ( $query->is_archive('blog') ) { //カスタム投稿タイプを指定
+        $query->set( 'posts_per_page', '9' ); //表示件数を指定
+    }
+}
+add_action( 'pre_get_posts', 'change_posts_per_blog' );
 
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
@@ -55,20 +65,17 @@ function wpcf7_autop_return_false() {
 }
 
 // Contact Form7の送信ボタンをクリックした後の遷移先設定
-add_action( 'wp_footer', 'add_origin_thanks_page' );
-    function add_origin_thanks_page() {
-    $thanks = home_url('/contact-thanks/');
-    echo <<< EOC
-        <script>
-        var thanksPage = {
-            97af707: '{$thanks}',
-        };
-        document.addEventListener( 'wpcf7mailsent', function( event ) {
-        location = thanksPage[event.detail.contactFormId];
-        }, false );
-        </script>
-    EOC;
-    }
+add_action('wp_footer', 'redirect_to_thanks_page');
+function redirect_to_thanks_page() {
+  $homeUrl = home_url();
+  echo <<< EOD
+    <script>
+      document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = '{$homeUrl}/contact-thanks/';
+      }, false );
+    </script>
+  EOD;
+}
     /**
 * Contact Form 7 エラーメッセージの移動
 */

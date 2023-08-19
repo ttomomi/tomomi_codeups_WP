@@ -14,6 +14,7 @@
   border: 1px solid $black;
   padding: rem(3) rem(18);
   transition: 0.3s;
+  white-space: nowrap;
 }
 .link__item + .link__item {
   margin-left: rem(48);

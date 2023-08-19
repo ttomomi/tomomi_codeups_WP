@@ -29,7 +29,7 @@
                       $taxonomy_terms = get_terms( 'blog_item', array( 'hide_empty' => true ) );
                       foreach ( $taxonomy_terms as $taxonomy_term ) :
                   ?>
-                  <li class="tab__item js-tab <?php if(is_page('blog')) echo 'current'; ?>">
+                  <li class="tab__item js-tab <?php if($taxonomy_term->slug === $term){ echo 'current'; } ?>">
                       <a href="<?php echo esc_url( get_term_link( $taxonomy_term, 'blog_item' ) ); ?>">
                           <?php echo esc_html( $taxonomy_term->name ); ?>
                       </a>
@@ -39,27 +39,7 @@
               <div class="tab__group">
                 <div class="tab__box js-content">
                   <div class="blog__items cards main-blog__items">
-                  <?php if( wp_is_mobile() ){
-          $num = 4; // スマホの表示数(全件は-1)
-      } else {
-          $num = 8; // PCの表示数(全件は-1)
-      }
-      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-      $args = [
-          'post_type' => 'blog', // カスタム投稿の投稿タイプスラッグ
-          'paged' => $paged, // ページネーションがある場合に必要
-          'posts_per_page' => $num, // 表示件数
-          // カテゴリー(ターム)を指定する場合に書く↓
-          'tax_query' => array (
-              array (
-                  'taxonomy' => 'blog_category', // タクソノミーのスラッグ
-                  'terms' => 'recommend', // タームのスラッグ
-                  'field' => 'slug', //ターム名をスラッグで指定する（変更不要）
-              ),
-          // カテゴリー(ターム)を指定する場合に書く↑
-      )];
-      $wp_query = new WP_Query($args);
-      
+                 
                     <!-- 記事のループ処理開始 -->
                     <?php if(have_posts()):while (have_posts()):the_post(); ?>
                       <article class="cards__item card">
@@ -81,7 +61,7 @@
                           <p class="card__text">
                           <?php the_excerpt(); ?>
                           </p>
-                        </div>
+                        
                         <div class="card__info">
                           <div class="card__category">
                           <?php
@@ -94,10 +74,14 @@
                           <time class="card__date" datetime="<?php the_time('Y.n.j'); ?>"><?php the_time('Y.m.d'); ?>
                           </time>
                         </div>
+                        </div>
                       </a>
                     </article>
                   <?php endwhile; endif; ?>
                   </div>
+                </div>
+                <div class="main-blog__pagination pagination">
+                  <?php wp_pagenavi(); ?>
                 </div>
               </div>
             </div>

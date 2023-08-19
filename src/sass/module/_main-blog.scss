@@ -1,5 +1,7 @@
 @use "global" as *;
-
+.main-blog__inner {
+  max-width: rem(600);
+}
 .main-blog__tab {
   margin-top: rem(86);
   @include mq(md) {

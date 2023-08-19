@@ -15,12 +15,17 @@
 }
 .card__body {
   padding-top: rem(1);
+  padding-bottom: rem(16);
   padding-right: rem(21);
   padding-left: rem(21);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   @include mq(md) {
     padding-top: rem(4);
     padding-right: rem(23);
     padding-left: rem(23);
+    padding-bottom: rem(14);
   }
 }
 .card__title,
@@ -66,15 +71,7 @@ overflow: hidden;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding-top: rem(6);
-  padding-right: rem(21);
-  padding-left: rem(21);
-  padding-bottom: rem(16);
   @include mq(md) {
-    padding-right: rem(23);
-    padding-left: rem(23);
-    padding-bottom: rem(15);
-    padding-top: rem(9);
   }
 }
 .card__category {

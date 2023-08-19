@@ -30,7 +30,8 @@
                     $taxonomy_terms = get_terms( 'works_item', array( 'hide_empty' => true ) );
                     foreach ( $taxonomy_terms as $taxonomy_term ) :
                 ?>
-                <li class="tab__item js-tab <?php if(is_page('works')) echo 'current'; ?>">
+                <!-- liタグの中にタームのクラス名を追加して、背景に色をつける -->
+                <li class="tab__item js-tab <?php if($taxonomy_term->slug === $term){ echo 'current'; } ?>">
                     <a href="<?php echo esc_url( get_term_link( $taxonomy_term, 'works_item' ) ); ?>">
                         <?php echo esc_html( $taxonomy_term->name ); ?>
                     </a>
@@ -62,7 +63,7 @@
                                     </div>
                                 </a>
                         <?php endwhile; endif; ?>
-                    </div>
+                        </div>
                     </div>
                     <div class="main-works__pagination pagination">
                         <div class="main-works__inner inner">
@@ -70,7 +71,7 @@
                         </div>
                     </div>
 
-                    </div>
                 </div>
-                    </div>
+            </div>
+        </div>
 <?php get_footer(); ?>

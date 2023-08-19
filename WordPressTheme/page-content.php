@@ -12,6 +12,11 @@
       </div>
       
       <!-- content -->
+      <?php if ( is_page( "contact" ) ) : ?>
+  固定ページのみの処理
+<?php else: ?>
+  固定ページ以外の処理
+<?php endif; ?>
       <section class="sub-content bottom-content">
         <div class="sub-content__inner inner">
         <?php get_template_part('parts/breadcrumbs') ?>

@@ -1,5 +1,5 @@
 <!-- contact -->
-<section class="contact news-contact">
+<section class="contact bottom-contact">
         <div class="contact__inner inner">
           <div class="contact__title section-title">
             <h2 class="section-title__main">お問い合わせ</h2>

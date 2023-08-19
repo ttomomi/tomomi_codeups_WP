@@ -32,9 +32,9 @@
                     foreach ( $taxonomy_terms as $taxonomy_term ) :
                   ?>
                   <li class="tab__item js-tab"<?php if ($current_tab === 'all') echo 'current'; ?>>
-                  <a href="<?php echo esc_url( get_term_link( $taxonomy_term, 'blog_item' ) ); ?>">
-                    <?php echo esc_html( $taxonomy_term->name ); ?>
-                  </a>
+                    <a href="<?php echo esc_url( get_term_link( $taxonomy_term, 'blog_item' ) ); ?>">
+                      <?php echo esc_html( $taxonomy_term->name ); ?>
+                    </a>
                   </li>
                   <?php endforeach; ?>
               </ul>
@@ -62,18 +62,18 @@
                           <p class="card__text">
                           <?php the_excerpt(); ?>
                           </p>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__category">
-                          <?php
-                              $taxonomy_terms = get_the_terms($post->ID, 'blog_item'); 
-                              if ( $taxonomy_terms ) {
-                                echo '<span>'.$taxonomy_terms[0]->name.'</span>';
-                              }
-                            ?>
+                          <div class="card__info">
+                            <div class="card__category">
+                            <?php
+                                $taxonomy_terms = get_the_terms($post->ID, 'blog_item'); 
+                                if ( $taxonomy_terms ) {
+                                  echo '<span>'.$taxonomy_terms[0]->name.'</span>';
+                                }
+                              ?>
+                            </div>
+                            <time class="card__date" datetime="<?php the_time('Y.n.j'); ?>"><?php the_time('Y.m.d'); ?>
+                            </time>
                           </div>
-                          <time class="card__date" datetime="<?php the_time('Y.n.j'); ?>"><?php the_time('Y.m.d'); ?>
-                          </time>
                         </div>
                       </a>
                     </article>
@@ -81,77 +81,10 @@
                 </div>
               </div>
             </div>
-            <div class="tab__box js-content">
-              <div class="main-works__items  main-blog__items">
-                <article class="cards__item card">
-                  <a href="sub-blog.html" class="card__list">
-                    <figure class="card__img">
-                            <img
-                              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-blog-card1.jpg"
-                              alt="ブログカード1"
-                            />
-                    </figure>
-                    <div class="card__body">
-                      <h3 class="card__title">
-                        コーヒー教室の開催。
-                      </h3>
-                      <p class="card__text">
-                        50人もの方が集まり、みんなで和気藹々と行われたコーヒーの淹れ方教室。
-                      </p>
-                    </div>
-                    <div class="card__info">
-                      <div class="card__category">
-                        イベント
-                      </div>
-                      <time class="card__date" datetime="2021-07-20">
-                        2021.07.20
-                      </time>
-                    </div>
-                  </a>
-                </article>
-              </div>
-            </div>
-            <div class="tab__box js-content">
-              <div class="main-works__items  main-blog__items">
-                <article class="cards__item card">
-                  <a href="sub-blog.html" class="card__list">
-                    <figure class="card__img">
-                            <img
-                              src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-blog-card1.jpg"
-                              alt="ブログカード1"
-                            />
-                    </figure>
-                    <div class="card__body">
-                      <h3 class="card__title">
-                        コーヒー教室の開催。
-                      </h3>
-                      <p class="card__text">
-                        50人もの方が集まり、みんなで和気藹々と行われたコーヒーの淹れ方教室。
-                      </p>
-                    </div>
-                    <div class="card__info">
-                      <div class="card__category">
-                        イベント
-                      </div>
-                      <time class="card__date" datetime="2021-07-20">
-                        2021.07.20
-                      </time>
-                    </div>
-                  </a>
-                </article>
-              </div>
-            </div>
-          </div>
+            
           </div>
           <div class="main-blog__pagination pagination">
-            <ol class="pagination__items">
-              <li class="pagination__prev"><a href="#">prev</a></li>
-              <li class="pagination__number pagination__current"><a href="#">1</a></li>
-              <li class="pagination__number"><a href="#">2</a></li>
-              <li class="pagination__number"><a href="#">3</a></li>
-              <li class="pagination__number"><a href="#">4</a></li>
-              <li class="pagination__next"><a href="#">next</a></li>
-            </ol>
+          <?php wp_pagenavi(); ?>
           </div>
         </div>
       </section>
