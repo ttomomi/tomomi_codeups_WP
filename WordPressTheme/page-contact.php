@@ -14,8 +14,9 @@
       <section class="sub-contact bottom-main-contact">
         <div class="sub-contact__inner inner">
         <?php get_template_part('parts/breadcrumbs') ?>
-        </div>
+        
         <?php echo do_shortcode('[contact-form-7 id="97af707" title="お問い合わせ"]'); ?>
+        </div>
       </section>
 
     </main>

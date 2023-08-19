@@ -458,6 +458,38 @@ a {
 	margin-top: 1.5625rem;
 }
 
+.contact-thanks {
+	color: #333;
+	margin-top: 8.125rem;
+	text-align: center;
+}
+
+.contact-thanks__title,
+.contact-thanks__text {
+	font-weight: 400;
+	margin-top: 5rem;
+}
+
+.contact-thanks__title {
+	font-size: 1.25rem;
+	letter-spacing: 0.002em;
+}
+
+.contact-thanks__text {
+	font-size: 1.25rem;
+	letter-spacing: 0.02em;
+}
+
+.contact-thanks__btn {
+	margin-top: 5rem;
+	text-align: center;
+}
+
+.contact-thanks__btn a {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
 .contact {
 	background-color: #333;
 	padding-bottom: 4rem;
@@ -651,13 +683,9 @@ a {
 	text-indent: 0.4em;
 }
 
-.form {
-	color: #333;
-	display: block;
-	letter-spacing: 0.007em;
-}
-
 .form__item {
+	color: #333;
+	letter-spacing: 0.007em;
 	margin: auto;
 	max-width: 33.75rem;
 }
@@ -666,12 +694,13 @@ a {
 	margin-top: 2rem;
 }
 
-.form .form__item dt {
+.form__item dt {
 	flex: 0 1 9.375rem;
 }
 
 .form__item dd {
 	flex: 0 1 calc(100% - 9.375rem);
+	margin-top: 1rem;
 	width: 100%;
 }
 
@@ -679,11 +708,6 @@ a {
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.85;
-	text-align: right;
-}
-
-.form__item dd {
-	margin-top: 1rem;
 }
 
 .form__btn {
@@ -712,16 +736,22 @@ textarea {
 
 [type=button],
 [type=submit] {
+	background-color: #333 !important;
+	border: none !important;
+}
+
+[type=button],
+[type=submit] {
 	-webkit-text-decoration: none;
-	background-color: #333;
 	background-image: none;
 	border: none;
 	border-radius: 0;
 	color: #fff;
 	cursor: pointer;
-	display: inline-block;
+	display: block;
 	font-size: 1.25rem;
 	margin: 0;
+	margin: auto;
 	padding: 0.625rem 9.125rem;
 	text-decoration: none;
 	transition: 0.3s ease;
@@ -739,6 +769,41 @@ textarea {
 textarea {
 	height: 15.625rem;
 	width: 100%;
+}
+
+.wpcf7-spinne {
+	display: none !important;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+	color: #FF5757;
+	font-size: 1rem;
+}
+
+.wpcf7-response-output {
+	border: none;
+	color: #FF5757;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	border: none !important;
+}
+
+.wpcf7-form-control {
+	background: rgba(255, 0, 0, 0.1); /*エラー有り*/
+	padding: 11px 15px;
+}
+
+.wpcf7-form-control:only-child {
+	background: #fff;
+	border-color: rgba(56, 51, 49, 0.3); /*エラーなし*/
+}
+
+.wpcf7-not-valid-tip {
+	display: none;
 }
 
 .hamburger {
@@ -1086,6 +1151,31 @@ textarea {
 
 .news__inner.inner {
 	max-width: 37.5rem;
+}
+
+.not {
+	margin-top: 8.125rem;
+	text-align: center;
+}
+
+.not__title {
+	color: rgb(154, 113, 1);
+	font-size: 2.5rem;
+	text-transform: capitalize;
+}
+
+.not__text,
+.not__btn {
+	margin-top: 5rem;
+}
+
+.not__text {
+	font-size: 1.25rem;
+}
+
+.not__btn a {
+	display: inline-block;
+	text-transform: uppercase;
 }
 
 .overview-content {
@@ -2209,6 +2299,18 @@ html {
 	margin-left: 1.5625rem;
 }
 
+.contact-thanks {
+	margin-top: 8.125rem;
+}
+
+.contact-thanks__title {
+	font-size: 1.875rem;
+}
+
+.contact-thanks__text {
+	font-size: 1.875rem;
+}
+
 .contact {
 	padding-bottom: 9.3125rem;
 	padding-top: 9.25rem;
@@ -2287,6 +2389,7 @@ html {
 }
 
 .form__item {
+	align-items: center;
 	display: flex;
 	max-width: 53.5rem;
 	width: 100%;
@@ -2296,11 +2399,12 @@ html {
 	margin-top: 2.8125rem;
 }
 
-.form__item dd {
-	margin-left: 1.5rem;
+.form__item dt {
+	text-align: right;
 }
 
 .form__item dd {
+	margin-left: 1.5rem;
 	margin-top: 0;
 }
 
@@ -2428,6 +2532,18 @@ textarea {
 
 .news__inner.inner {
 	max-width: 68.25rem;
+}
+
+.not {
+	margin-top: 12.5rem;
+}
+
+.not__title {
+	font-size: 3.75rem;
+}
+
+.not__text {
+	font-size: 1.875rem;
 }
 
 .overview-content {

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.contact-thanks {
+  text-align: center;
+  color: $black;
+  margin-top: rem(130);
+  @include mq(md) {
+    margin-top: rem(130);
+  }
+}
+.contact-thanks__title,
+.contact-thanks__text {
+  font-weight: $regular;
+  margin-top: rem(80);
+}
+.contact-thanks__title {
+  font-size: rem(20);
+  letter-spacing: 0.002em;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+.contact-thanks__text {
+  font-size: rem(20);
+  letter-spacing: 0.02em;
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+.contact-thanks__btn {
+  text-align: center;
+  margin-top: rem(80);
+}
+.contact-thanks__btn a {
+  display: inline-block;
+  text-transform: uppercase;
+}

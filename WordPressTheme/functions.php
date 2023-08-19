@@ -48,5 +48,42 @@ function change_posts_per_page($query) {
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
-//画像圧縮品質変更(PHP5.3以上)
-add_filter( 'jpeg_quality', function( $arg ){ return 100; } );
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+    return false;
+}
+
+// Contact Form7の送信ボタンをクリックした後の遷移先設定
+add_action( 'wp_footer', 'add_origin_thanks_page' );
+    function add_origin_thanks_page() {
+    $thanks = home_url('/contact-thanks/');
+    echo <<< EOC
+        <script>
+        var thanksPage = {
+            97af707: '{$thanks}',
+        };
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = thanksPage[event.detail.contactFormId];
+        }, false );
+        </script>
+    EOC;
+    }
+    /**
+* Contact Form 7 エラーメッセージの移動
+*/
+function wpcf7_custom_show_errors() {
+    if (function_exists('wpcf7')) {
+        $submission = WPCF7_Submission::get_instance();
+
+        if ($submission) {
+            $result = wpcf7_send_mail($submission);
+            
+            if (!$result) {
+                // フォーム送信後にエラーがある場合、エラーメッセージを表示するためのクラスを追加
+                echo '<style>.wpcf7-custom-item-error { display: block; }</style>';
+            }
+        }
+    }
+}
+add_action('wp_footer', 'wpcf7_custom_show_errors');

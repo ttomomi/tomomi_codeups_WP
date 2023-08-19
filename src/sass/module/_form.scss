@@ -1,47 +1,44 @@
 @use "global" as *;
 
 
-.form {
-  letter-spacing: 0.007em;
-  color: $black;
-  display: block;
-}
+
 .form__item {
   max-width: rem(540);
   margin: auto;
+  letter-spacing: 0.007em;
+  color: $black;
   @include mq(md) {
   display: flex;
+  align-items: center;
   width: 100%;
   max-width: rem(856);
 }
 }
-.form__item:not(:first-child){
+.form__item:not(:first-child) {
   margin-top: rem(32);
   @include mq(md) {
     margin-top: rem(45);
   }
 }
-.form .form__item dt {
+.form__item dt {
   flex: 0 1 rem(150);
+  @include mq(md) {
+    text-align: right;
+  }
 }
- .form__item dd {
+.form__item dd {
+  margin-top: rem(16);
   width: 100%;
   flex: 0 1 calc(100% - rem(150));
   @include mq(md) {
     margin-left: rem(24);
+    margin-top: 0;
   }
 }
 .form__item dt {
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(25.9 / 14);
-  text-align: right;
-}
-.form__item dd {
-  margin-top: rem(16);
-  @include mq(md) {
-    margin-top: 0;
-  }
 }
 .form__btn {
   text-align: center;
@@ -79,17 +76,19 @@ textarea {
   margin: 0;
   background-image: none;
   width: auto;
-  display: inline-block;
+  display: block;
   text-decoration: none;
   border: none;
   border-radius: 0;
   // カスタム
   padding: rem(10) rem(146);
-  background-color: $black;
+  background-color: $black !important;
+  border: none !important;
   color: $white;
   font-size: rem(20);
   cursor: pointer;
   transition: 0.3s ease;
+  margin: auto;
   @include mq(md) {
     padding: rem(20) rem(163);
     font-size: rem(16);
@@ -115,4 +114,31 @@ textarea {
     height: rem(300);
   }
 }
-
+.wpcf7-spinne {
+  display: none !important;
+}
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+color:#FF5757;
+font-size: rem(16);
+}
+.wpcf7-response-output {
+  text-align: center;
+  border: none;
+  color:#FF5757;
+  font-size: rem(16);
+}
+.wpcf7 form .wpcf7-response-output {
+  border: none !important;
+}
+.wpcf7-form-control {/*エラー有り*/
+	background: rgba(255,0,0,.1);
+	padding: 11px 15px;
+}
+.wpcf7-form-control:only-child {/*エラーなし*/
+	border-color: rgba(56, 51, 49, .3);
+	background: $white;
+}
+.wpcf7-not-valid-tip {
+  display: none;
+}
