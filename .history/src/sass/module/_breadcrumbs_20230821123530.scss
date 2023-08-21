@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.breadcrumbs {
+  display: flex;
+}
+.breadcrumbs__item {
+  font-size: rem(16);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1;
+  transition: ease .3s;
+}
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: ">";
+  margin: rem(5); /* 記号の左右の余白 */
+  color: $black; /* 記号の色 */
+}
+.breadcrumbs__item a:hover {
+  color: ;
+}

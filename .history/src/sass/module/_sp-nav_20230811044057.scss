@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.sp-nav {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #9a7108fa;
+  width: 100%;
+  height: 100vh;
+  z-index: 8888;
+  transition: ease .3s;
+  padding-top: rem(50);
+  @include mq(md) {
+    display: none;
+  }
+}
+.sp-nav.is-open {
+  transform: translateX(0);
+}
+.sp-nav__scroll {
+  overflow: auto;
+  height: 100%;
+  padding: rem(50) 0 rem(50);
+}
+.sp-nav__items {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  min-height: rem(700);
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+.sp-nav__item {
+  width: 100vw;
+}
+.sp-nav__item a {
+  display: block;
+  width: 100%;
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  text-align: center;
+  color: #fff;
+  font-size: rem(16);
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+}
+
+// ホバー時黄色の線
+.sp-nav__item a span {
+  position: relative;
+}
+.sp-nav__item a span::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: rem(1);
+  background: #FFEA2E;
+  bottom: rem(-3);
+  visibility: hidden;
+}
+.sp-nav__item a:hover span::after {
+  visibility: visible;
+}
+.sp-nav__addClass {
+
+}

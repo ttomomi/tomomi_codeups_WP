@@ -78,11 +78,11 @@ var swiper1 = new Swiper(".js-mv-swiper", {
 
 // swiper Works
 var swiper2 = new Swiper(".js-works-swiper", {
+  loop: true,
   pagination: {
     el: ".js-works-pagination",
     clickable: true
   },
-  loop: true,
   autoplay: {
     delay: 4000,
     // 4秒後に次のスライドへ
